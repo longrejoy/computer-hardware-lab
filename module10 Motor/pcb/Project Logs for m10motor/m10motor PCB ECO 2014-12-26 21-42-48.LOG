@@ -1,0 +1,33 @@
+Removed Pin From Net: NetName=PB5 Pin=U2-1
+Removed Pin From Net: NetName=PE4 Pin=U2-2
+Removed Pin From Net: NetName=PE5 Pin=U2-9
+Added Component: Designator=P4(XHP5)
+Added Component: Designator=U1(ULN2003A)
+Added Pin To Net: NetName=VCC Pin=P4-1
+Added Pin To Net: NetName=O1 Pin=P4-2
+Added Pin To Net: NetName=O2 Pin=P4-3
+Added Pin To Net: NetName=O3 Pin=P4-4
+Added Pin To Net: NetName=O4 Pin=P4-5
+Added Pin To Net: NetName=PD3 Pin=U1-1
+Added Pin To Net: NetName=PD2 Pin=U1-2
+Added Pin To Net: NetName=PD1 Pin=U1-3
+Added Pin To Net: NetName=PD0 Pin=U1-4
+Added Pin To Net: NetName=GND Pin=U1-8
+Added Pin To Net: NetName=VCC Pin=U1-9
+Added Pin To Net: NetName=O4 Pin=U1-13
+Added Pin To Net: NetName=O3 Pin=U1-14
+Added Pin To Net: NetName=O2 Pin=U1-15
+Added Pin To Net: NetName=O1 Pin=U1-16
+Added Pin To Net: NetName=VCC3.3 Pin=U2-1
+Added Pin To Net: NetName=PB6 Pin=U2-2
+Added Pin To Net: NetName=PB7 Pin=U2-9
+Change Net Name : Old Net Name=I01 New Net Name=PC7
+Change Net Name : Old Net Name=I02 New Net Name=PC6
+Change Net Name : Old Net Name=I03 New Net Name=PC5
+Change Net Name : Old Net Name=I04 New Net Name=PC4
+Change Net Name : Old Net Name=PD0 New Net Name=I04
+Change Net Name : Old Net Name=PD1 New Net Name=I03
+Change Net Name : Old Net Name=PD2 New Net Name=I02
+Change Net Name : Old Net Name=PD3 New Net Name=I01
+Added Member To Class: ClassName=m10motor Member=Component P4 Header5
+Added Member To Class: ClassName=m10motor Member=Component U1 ULN2003
