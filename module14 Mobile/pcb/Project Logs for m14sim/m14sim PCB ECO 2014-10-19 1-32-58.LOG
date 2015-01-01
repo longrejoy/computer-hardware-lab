@@ -1,0 +1,5 @@
+Change Component Comment : Designator=D1 Old Comment=LED1 New Comment=LED3
+Change Component Designator: OldDesignator=D0 NewDesignator=D1
+Change Component Designator: OldDesignator=D1 NewDesignator=D3
+Change Component Designator: OldDesignator=ZIF40 NewDesignator=*?
+Change Net Name : Old Net Name=NetD1_2 New Net Name=NetD3_2
