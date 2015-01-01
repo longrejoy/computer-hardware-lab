@@ -1,0 +1,28 @@
+Change Component Designator: OldDesignator=R1 NewDesignator=R4
+Added Component: Designator=LED_RX(LED_0603_RED)
+Added Component: Designator=LED_TX(LED_0603_RED)
+Added Component: Designator=POWER(LED_0603_RED)
+Added Component: Designator=R1(RES_0603)
+Added Component: Designator=R2(RES_0603)
+Added Component: Designator=R3(RES_0603)
+Added Pin To Net: NetName=GND Pin=LED_RX-2
+Added Pin To Net: NetName=GND Pin=LED_TX-2
+Added Pin To Net: NetName=GND Pin=POWER-2
+Added Pin To Net: NetName=PB3 Pin=R1-1
+Added Pin To Net: NetName=PD6 Pin=R2-1
+Added Pin To Net: NetName=VBUS Pin=R3-1
+Added Pin To Net: NetName=NetLED_RX_1 Pin=LED_RX-1
+Added Pin To Net: NetName=NetLED_RX_1 Pin=R2-2
+Added Net: Name=NetLED_RX_1
+Added Pin To Net: NetName=NetLED_TX_1 Pin=LED_TX-1
+Added Pin To Net: NetName=NetLED_TX_1 Pin=R1-2
+Added Net: Name=NetLED_TX_1
+Added Pin To Net: NetName=NetPOWER_1 Pin=POWER-1
+Added Pin To Net: NetName=NetPOWER_1 Pin=R3-2
+Added Net: Name=NetPOWER_1
+Added Member To Class: ClassName=m12can Member=Component LED_RX LED2
+Added Member To Class: ClassName=m12can Member=Component LED_TX LED2
+Added Member To Class: ClassName=m12can Member=Component POWER LED2
+Added Member To Class: ClassName=m12can Member=Component R2 Res1
+Added Member To Class: ClassName=m12can Member=Component R3 Res1
+Added Member To Class: ClassName=m12can Member=Component R4 Res1
