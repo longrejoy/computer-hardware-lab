@@ -1,0 +1,53 @@
+Added Component: Designator=D1(LED_0603_RED)
+Added Component: Designator=D2(LED_0603_RED)
+Added Component: Designator=R10(RES_0603)
+Added Component: Designator=R11(RES_0603)
+Added Component: Designator=U1(SSOP28)
+Added Pin To Net: NetName=NetD1_1 Pin=D1-1
+Added Pin To Net: NetName=GND Pin=D1-2
+Added Pin To Net: NetName=NetD2_1 Pin=D2-1
+Added Pin To Net: NetName=GND Pin=D2-2
+Added Pin To Net: NetName=PB4 Pin=R10-1
+Added Pin To Net: NetName=NetD2_1 Pin=R10-2
+Added Pin To Net: NetName=NetD1_1 Pin=R11-2
+Added Pin To Net: NetName=NetC1_2 Pin=U1-1
+Added Pin To Net: NetName=GND Pin=U1-2
+Added Pin To Net: NetName=NET_MISO Pin=U1-6
+Added Pin To Net: NetName=NET_MOSI Pin=U1-7
+Added Pin To Net: NetName=NET_SCK Pin=U1-8
+Added Pin To Net: NetName=NET_CS Pin=U1-9
+Added Pin To Net: NetName=PE0 Pin=U1-10
+Added Pin To Net: NetName=GND Pin=U1-11
+Added Pin To Net: NetName=TPIN- Pin=U1-12
+Added Pin To Net: NetName=TPIN+ Pin=U1-13
+Added Pin To Net: NetName=NetR7_2 Pin=U1-14
+Added Pin To Net: NetName=VCC3.3 Pin=U1-15
+Added Pin To Net: NetName=TPOUT- Pin=U1-16
+Added Pin To Net: NetName=TPOUT+ Pin=U1-17
+Added Pin To Net: NetName=GND Pin=U1-18
+Added Pin To Net: NetName=VCC3.3 Pin=U1-19
+Added Pin To Net: NetName=VCC3.3 Pin=U1-20
+Added Pin To Net: NetName=GND Pin=U1-21
+Added Pin To Net: NetName=GND Pin=U1-22
+Added Pin To Net: NetName=NetC3_2 Pin=U1-23
+Added Pin To Net: NetName=NetC4_2 Pin=U1-24
+Added Pin To Net: NetName=VCC3.3 Pin=U1-25
+Added Pin To Net: NetName=LEDB Pin=U1-26
+Added Pin To Net: NetName=LEDA Pin=U1-27
+Added Pin To Net: NetName=VCC3.3 Pin=U1-28
+Change Net Name : Old Net Name=LED1 New Net Name=PB3
+Change Net Name : Old Net Name=LED2 New Net Name=PD6
+Change Net Name : Old Net Name=NET_INT New Net Name=PD2
+Change Net Name : Old Net Name=NET_RST New Net Name=PE3
+Change Net Name : Old Net Name=PB4 New Net Name=LED1
+Change Net Name : Old Net Name=PE0 New Net Name=NET_RST
+Change Net Name : Old Net Name=PE1 New Net Name=LED0
+Added Pin To Net: NetName=LED2 Pin=R11-1
+Added Net: Name=LED2
+Added Pin To Net: NetName=NET_INT Pin=U1-4
+Added Net: Name=NET_INT
+Added Member To Class: ClassName=m11tcp Member=Component D1 LED2
+Added Member To Class: ClassName=m11tcp Member=Component D2 LED2
+Added Member To Class: ClassName=m11tcp Member=Component R10 Res Semi
+Added Member To Class: ClassName=m11tcp Member=Component R11 Res Semi
+Added Member To Class: ClassName=m11tcp Member=Component U1 ENC28J60

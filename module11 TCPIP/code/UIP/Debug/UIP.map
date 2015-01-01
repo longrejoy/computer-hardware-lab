@@ -1,0 +1,862 @@
+******************************************************************************
+                  TI ARM Linker PC v5.0.4                      
+******************************************************************************
+>> Linked Mon Dec 29 10:00:08 2014
+
+OUTPUT FILE NAME:   <UIP.out>
+ENTRY POINT SYMBOL: "_c_int00"  address: 0000742d
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+  FLASH                 00000000   00040000  00009968  00036698  R  X
+  SRAM                  20000000   00008000  000025c3  00005a3d  RW X
+
+
+SEGMENT ALLOCATION MAP
+
+run origin  load origin   length   init length attrs members
+----------  ----------- ---------- ----------- ----- -------
+00000000    00000000    00009968   00009968    r-x
+  00000000    00000000    0000026c   0000026c    r-- .intvecs
+  0000026c    0000026c    00007684   00007684    r-x .text
+  000078f0    000078f0    00001910   00001910    r-- .const
+  00009200    00009200    00000768   00000768    r-- .cinit
+20000000    20000000    00001ae6   00000000    rw-
+  20000000    20000000    00001ae6   00000000    rw- .bss
+20001ae8    20001ae8    00000ae0   000008d5    rw-
+  20001ae8    20001ae8    000008d5   000008d5    rw- .data
+  200023c0    200023c0    00000200   00000000    rw- .stack
+  200025c0    200025c0    00000008   00000000    rw- .sysmem
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+.intvecs   0    00000000    0000026c     
+                  00000000    0000026c     startup_ccs.obj (.intvecs)
+
+.init_array 
+*          0    00000000    00000000     UNINITIALIZED
+
+.text      0    0000026c    00007684     
+                  0000026c    000015dc     uip.obj (.text)
+                  00001848    00000e9e     rtsv7M4_T_le_v4SPD16_eabi.lib : _printfi.obj (.text)
+                  000026e6    00000002     --HOLE-- [fill = 0]
+                  000026e8    00000a08     httpd.obj (.text)
+                  000030f0    0000062c     enc28j60.obj (.text)
+                  0000371c    000005b0     main.obj (.text)
+                  00003ccc    000004a8     uip_arp.obj (.text)
+                  00004174    0000049c     uartstdio.obj (.text)
+                  00004610    0000048c     psock.obj (.text)
+                  00004a9c    000003d8     rtsv7M4_T_le_v4SPD16_eabi.lib : memory.obj (.text)
+                  00004e74    00000378                                   : lowlev.obj (.text)
+                  000051ec    000002f4     httpd-cgi.obj (.text)
+                  000054e0    000002e4     rtsv7M4_T_le_v4SPD16_eabi.lib : trgdrv.obj (.text)
+                  000057c4    0000025c     tcp_client_demo.obj (.text)
+                  00005a20    00000230     tcp_server_demo.obj (.text)
+                  00005c50    000001f4     rtsv7M4_T_le_v4SPD16_eabi.lib : ull_div_t2.obj (.text)
+                  00005e44    000001c0                                   : fopen.obj (.text)
+                  00006004    000001b6                                   : fd_add_t2.obj (.text)
+                  000061ba    00000002     --HOLE-- [fill = 0]
+                  000061bc    00000140     httpd-fs.obj (.text)
+                  000062fc    00000136     rtsv7M4_T_le_v4SPD16_eabi.lib : fd_div_t2.obj (.text)
+                  00006432    00000130     driverlib.lib : gpio.obj (.text:GPIOPadConfigSet)
+                  00006562    00000002     --HOLE-- [fill = 0]
+                  00006564    00000130     rtsv7M4_T_le_v4SPD16_eabi.lib : fputs.obj (.text)
+                  00006694    00000118     driverlib.lib : sysctl.obj (.text:SysCtlClockGet)
+                  000067ac    000000fc     rtsv7M4_T_le_v4SPD16_eabi.lib : fd_mul_t2.obj (.text)
+                  000068a8    000000f0     driverlib.lib : sysctl.obj (.text:SysCtlClockSet)
+                  00006998    000000e0     buttons.obj (.text)
+                  00006a78    000000cc     rtsv7M4_T_le_v4SPD16_eabi.lib : setvbuf.obj (.text)
+                  00006b44    000000ac                                   : _io_perm.obj (.text)
+                  00006bf0    000000a8                                   : fflush.obj (.text)
+                  00006c98    0000009c                                   : fputc.obj (.text)
+                  00006d34    0000009c                                   : memcpy_t2.obj (.text)
+                  00006dd0    00000098                                   : snprintf.obj (.text)
+                  00006e68    00000094                                   : auto_init.obj (.text)
+                  00006efc    00000084                                   : fclose.obj (.text)
+                  00006f80    00000080     tapdev.obj (.text)
+                  00007000    0000007e     rtsv7M4_T_le_v4SPD16_eabi.lib : fd_cmp_t2.obj (.text)
+                  0000707e    00000078                                   : memset_t2.obj (.text)
+                  000070f6    00000002     --HOLE-- [fill = 0]
+                  000070f8    00000070                                   : printf.obj (.text)
+                  00007168    00000064                                   : fseek.obj (.text)
+                  000071cc    00000060                                   : trgmsg.obj (.text)
+                  0000722c    00000060     tcp_demo.obj (.text)
+                  0000728c    0000005e     rtsv7M4_T_le_v4SPD16_eabi.lib : copy_decompress_rle.obj (.text)
+                  000072ea    00000058     timer.obj (.text)
+                  00007342    00000056     rtsv7M4_T_le_v4SPD16_eabi.lib : ltoa.obj (.text)
+                  00007398    0000004c                                   : atoi.obj (.text)
+                  000073e4    00000048     driverlib.lib : gpio.obj (.text:GPIOPinConfigure)
+                  0000742c    00000048     rtsv7M4_T_le_v4SPD16_eabi.lib : boot.obj (.text)
+                  00007474    00000048                                   : fd_toi_t2.obj (.text)
+                  000074bc    00000044                                   : cpy_tbl.obj (.text)
+                  00007500    00000044                                   : xdtest.obj (.text)
+                  00007544    00000042     driverlib.lib : ssi.obj (.text:SSIConfigSetExpClk)
+                  00007586    00000042     rtsv7M4_T_le_v4SPD16_eabi.lib : u_divt2.obj (.text)
+                  000075c8    00000040                                   : exit.obj (.text)
+                  00007608    00000034     driverlib.lib : sysctl.obj (.text:SysCtlPeripheralEnable)
+                  0000763c    00000034     rtsv7M4_T_le_v4SPD16_eabi.lib : strstr.obj (.text)
+                  00007670    00000030     led.obj (.text)
+                  000076a0    00000030     rtsv7M4_T_le_v4SPD16_eabi.lib : strncpy.obj (.text)
+                  000076d0    0000002e                                   : i_tofd_t2.obj (.text)
+                  000076fe    0000002a     driverlib.lib : gpio.obj (.text:GPIODirModeSet)
+                  00007728    00000026     rtsv7M4_T_le_v4SPD16_eabi.lib : strncmp.obj (.text)
+                  0000774e    0000001c                                   : memccpy.obj (.text)
+                  0000776a    00000018     driverlib.lib : gpio.obj (.text:GPIOPinTypeGPIOOutput)
+                  00007782    00000002     --HOLE-- [fill = 0]
+                  00007784    00000018     rtsv7M4_T_le_v4SPD16_eabi.lib : args_main.obj (.text)
+                  0000779c    00000018                                   : ll_mul_t2.obj (.text)
+                  000077b4    00000018                                   : strcmp.obj (.text)
+                  000077cc    00000018                                   : strrchr.obj (.text)
+                  000077e4    00000016                                   : memchr.obj (.text)
+                  000077fa    00000016                                   : strchr.obj (.text)
+                  00007810    00000014                                   : _lock.obj (.text)
+                  00007824    00000014                                   : strlen.obj (.text)
+                  00007838    00000012     driverlib.lib : gpio.obj (.text:GPIOPinTypeSSI)
+                  0000784a    00000012                   : gpio.obj (.text:GPIOPinTypeUART)
+                  0000785c    00000012     rtsv7M4_T_le_v4SPD16_eabi.lib : copy_zero_init.obj (.text:decompress:ZI)
+                  0000786e    00000012                                   : xdclass.obj (.text)
+                  00007880    00000010                                   : strcpy.obj (.text)
+                  00007890    0000000e                                   : copy_decompress_none.obj (.text:decompress:none)
+                  0000789e    0000000c     driverlib.lib : ssi.obj (.text:SSIDataGet)
+                  000078aa    00000002     --HOLE-- [fill = 0]
+                  000078ac    0000000c     clock-arch.obj (.text)
+                  000078b8    0000000c     startup_ccs.obj (.text)
+                  000078c4    0000000a     driverlib.lib : ssi.obj (.text:SSIDataPut)
+                  000078ce    0000000a                   : ssi.obj (.text:SSIEnable)
+                  000078d8    00000006                   : gpio.obj (.text:GPIOPinRead)
+                  000078de    00000006                   : gpio.obj (.text:GPIOPinWrite)
+                  000078e4    00000006                   : sysctl.obj (.text:SysCtlDelay)
+                  000078ea    00000006     rtsv7M4_T_le_v4SPD16_eabi.lib : copy_decompress_rle.obj (.text:decompress:rle24)
+
+.const     0    000078f0    00001910     
+                  000078f0    000004f3     httpd-fs.obj (.const:.string:data_files_shtml)
+                  00007de3    00000001     --HOLE-- [fill = 0]
+                  00007de4    00000402     httpd-fs.obj (.const:.string:data_style_css)
+                  000081e6    00000002     --HOLE-- [fill = 0]
+                  000081e8    00000343     httpd-fs.obj (.const:.string:data_stats_shtml)
+                  0000852b    00000001     --HOLE-- [fill = 0]
+                  0000852c    00000282     httpd-fs.obj (.const:.string:data_header_html)
+                  000087ae    00000002     --HOLE-- [fill = 0]
+                  000087b0    00000170     http-strings.obj (.const:.string)
+                  00008920    00000101     rtsv7M4_T_le_v4SPD16_eabi.lib : ctype.obj (.const:.string:_ctypes_)
+                  00008a21    00000003     --HOLE-- [fill = 0]
+                  00008a24    000000fa     httpd.obj (.const:.string)
+                  00008b1e    00000002     --HOLE-- [fill = 0]
+                  00008b20    000000e2     httpd-fs.obj (.const:.string:data_processes_shtml)
+                  00008c02    00000002     --HOLE-- [fill = 0]
+                  00008c04    000000de     httpd-fs.obj (.const:.string:data_tcp_shtml)
+                  00008ce2    00000002     --HOLE-- [fill = 0]
+                  00008ce4    000000cf     httpd-fs.obj (.const:.string:data_fade_png)
+                  00008db3    00000001     --HOLE-- [fill = 0]
+                  00008db4    000000c8     httpd-fs.obj (.const)
+                  00008e7c    000000ab     httpd-fs.obj (.const:.string:data_404_html)
+                  00008f27    00000001     --HOLE-- [fill = 0]
+                  00008f28    00000090     driverlib.lib : gpio.obj (.const:g_pui32GPIOBaseAddrs)
+                  00008fb8    0000007e     httpd-cgi.obj (.const:.string)
+                  00009036    00000002     --HOLE-- [fill = 0]
+                  00009038    0000006c     driverlib.lib : sysctl.obj (.const:g_pui32Xtals)
+                  000090a4    0000005b     http-strings.obj (.const:.string:http_header_404)
+                  000090ff    00000001     --HOLE-- [fill = 0]
+                  00009100    00000054     http-strings.obj (.const:.string:http_header_200)
+                  00009154    0000002b     http-strings.obj (.const:.string:http_content_type_binary)
+                  0000917f    00000001     --HOLE-- [fill = 0]
+                  00009180    0000001f     httpd-fs.obj (.const:.string)
+                  0000919f    00000001     --HOLE-- [fill = 0]
+                  000091a0    0000001c     uartstdio.obj (.const)
+                  000091bc    00000018     httpd-cgi.obj (.const)
+                  000091d4    00000012     uartstdio.obj (.const:.string)
+                  000091e6    00000002     --HOLE-- [fill = 0]
+                  000091e8    0000000a     uip_arp.obj (.const)
+                  000091f2    00000002     --HOLE-- [fill = 0]
+                  000091f4    00000006     tapdev.obj (.const:.string)
+                  000091fa    00000002     --HOLE-- [fill = 0]
+                  000091fc    00000004     uip.obj (.const)
+
+.cinit     0    00009200    00000768     
+                  00009200    0000073f     (.cinit..data.load) [load image, compression = rle]
+                  0000993f    00000001     --HOLE-- [fill = 0]
+                  00009940    0000000c     (__TI_handler_table)
+                  0000994c    00000004     --HOLE-- [fill = 0]
+                  00009950    00000008     (.cinit..bss.load) [load image, compression = zero_init]
+                  00009958    00000010     (__TI_cinit_table)
+
+.bss       0    20000000    00001ae6     UNINITIALIZED
+                  20000000    00001004     uip.obj (.bss:uip_buf)
+                  20001004    00000640     uip.obj (.bss:uip_conns)
+                  20001644    00000120     rtsv7M4_T_le_v4SPD16_eabi.lib : trgmsg.obj (.bss:__CIOBUF_)
+                  20001764    000000c8     tcp_client_demo.obj (.bss:tcp_client_databuf)
+                  2000182c    000000c8     tcp_server_demo.obj (.bss:tcp_server_databuf)
+                  200018f4    000000a0     rtsv7M4_T_le_v4SPD16_eabi.lib : defs.obj (.bss:_tmpnams)
+                  20001994    00000060     uip_arp.obj (.bss:arp_table)
+                  200019f4    00000050     uip.obj (.bss:uip_listenports)
+                  20001a44    00000030     uip.obj (.bss)
+                  20001a74    0000002c     uip.obj (.bss:uip_stat)
+                  20001aa0    00000018     main.obj (.bss)
+                  20001ab8    00000014     httpd-fs.obj (.bss)
+                  20001acc    00000008     enc28j60.obj (.bss)
+                  20001ad4    00000008     rtsv7M4_T_le_v4SPD16_eabi.lib : trgdrv.obj (.bss)
+                  20001adc    00000008     uip_arp.obj (.bss)
+                  20001ae4    00000001     tcp_client_demo.obj (.bss)
+                  20001ae5    00000001     tcp_server_demo.obj (.bss)
+
+.data      0    20001ae8    000008d5     
+                  20001ae8    00000689     httpd-fs.obj (.data:data_index_html)
+                  20002171    00000003     --HOLE--
+                  20002174    000000f0     rtsv7M4_T_le_v4SPD16_eabi.lib : defs.obj (.data:_ftable)
+                  20002264    000000cc                                   : lowlev.obj (.data)
+                  20002330    00000024     httpd-cgi.obj (.data:states)
+                  20002354    00000010     httpd-cgi.obj (.data)
+                  20002364    00000010     rtsv7M4_T_le_v4SPD16_eabi.lib : defs.obj (.data)
+                  20002374    0000000c     httpd.obj (.data)
+                  20002380    0000000c     rtsv7M4_T_le_v4SPD16_eabi.lib : memory.obj (.data)
+                  2000238c    00000008                                   : _lock.obj (.data)
+                  20002394    00000008                                   : exit.obj (.data)
+                  2000239c    00000006     uip.obj (.data)
+                  200023a2    00000002     --HOLE--
+                  200023a4    00000005     main.obj (.data)
+                  200023a9    00000003     --HOLE--
+                  200023ac    00000005     uartstdio.obj (.data)
+                  200023b1    00000003     --HOLE--
+                  200023b4    00000004     rtsv7M4_T_le_v4SPD16_eabi.lib : fopen.obj (.data)
+                  200023b8    00000004                                   : stkdepth_vars.obj (.data)
+                  200023bc    00000001     buttons.obj (.data)
+
+.stack     0    200023c0    00000200     UNINITIALIZED
+                  200023c0    00000200     --HOLE--
+
+.sysmem    0    200025c0    00000008     UNINITIALIZED
+                  200025c0    00000008     rtsv7M4_T_le_v4SPD16_eabi.lib : memory.obj (.sysmem)
+
+
+LINKER GENERATED COPY TABLES
+
+__TI_cinit_table @ 00009958 records: 2, size/record: 8, table size: 16
+	.data: load addr=00009200, load size=0000073f bytes, run addr=20001ae8, run size=000008d5 bytes, compression=rle
+	.bss: load addr=00009950, load size=00000008 bytes, run addr=20000000, run size=00001ae6 bytes, compression=zero_init
+
+
+LINKER GENERATED HANDLER TABLE
+
+__TI_handler_table @ 00009940 records: 3, size/record: 4, table size: 12
+	index: 0, handler: __TI_decompress_rle24
+	index: 1, handler: __TI_decompress_none
+	index: 2, handler: __TI_zero_init
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+address    name
+--------   ----
+000069e5   ButtonsState
+00006999   Buttons_Init
+000075c9   C$$EXIT
+000071f7   C$$IO$$
+20001aa0   D0
+20001aa4   D1
+000035cf   ENC28J60_Get_EREVID
+00003441   ENC28J60_Init
+000033cb   ENC28J60_PHY_Write
+00003649   ENC28J60_Packet_Receive
+000035dd   ENC28J60_Packet_Send
+0000338f   ENC28J60_Read
+000032bf   ENC28J60_Read_Buf
+00003209   ENC28J60_Read_Op
+000031e1   ENC28J60_Reset
+0000334f   ENC28J60_Set_Bank
+000033a9   ENC28J60_Write
+0000330b   ENC28J60_Write_Buf
+0000326f   ENC28J60_Write_Op
+000076ff   GPIODirModeSet
+00006433   GPIOPadConfigSet
+000073e5   GPIOPinConfigure
+000078d9   GPIOPinRead
+0000776b   GPIOPinTypeGPIOOutput
+00007839   GPIOPinTypeSSI
+0000784b   GPIOPinTypeUART
+000078df   GPIOPinWrite
+00005777   HOSTclock
+0000573d   HOSTclose
+000056ff   HOSTgetenv
+000056a3   HOSTlseek
+00005653   HOSTopen
+00005605   HOSTread
+000055a5   HOSTrename
+00005569   HOSTtime
+0000552f   HOSTunlink
+000054e1   HOSTwrite
+0000371d   InitConsole
+20002374   LED0_ON_PIC_ADDR
+20002378   LED1_ON_PIC_ADDR
+00007671   LED_Init
+2000237c   LED_OFF_PIC_ADDR
+000078b9   ResetISR
+UNDEFED    SHT$$INIT_ARRAY$$Base
+UNDEFED    SHT$$INIT_ARRAY$$Limit
+000030f1   SPI_ReadWriteByte
+00007545   SSIConfigSetExpClk
+0000789f   SSIDataGet
+000078c5   SSIDataPut
+000078cf   SSIEnable
+00006695   SysCtlClockGet
+000068a9   SysCtlClockSet
+000078e5   SysCtlDelay
+00007609   SysCtlPeripheralEnable
+0000374b   TIME_Init
+00003bf9   Timer0IntHandler
+00004175   UARTStdioConfig
+000042dd   UARTgetc
+0000421b   UARTgets
+000045dd   UARTprintf
+00004311   UARTvprintf
+000041cd   UARTwrite
+0000786f   _Dclass
+00007501   _Dtest
+20001644   __CIOBUF_
+200025c0   __STACK_END
+00000200   __STACK_SIZE
+200025c0   __STACK_TOP
+00000008   __SYSMEM_SIZE
+00009958   __TI_CINIT_Base
+00009968   __TI_CINIT_Limit
+00009940   __TI_Handler_Table_Base
+0000994c   __TI_Handler_Table_Limit
+00000001   __TI_args_main
+00006e69   __TI_auto_init
+00007891   __TI_decompress_none
+000078eb   __TI_decompress_rle24
+00000000   __TI_static_base__
+0000785d   __TI_zero_init
+00007001   __aeabi_cdcmpeq
+00007001   __aeabi_cdcmple
+00007475   __aeabi_d2iz
+0000600f   __aeabi_dadd
+000062fd   __aeabi_ddiv
+000067ad   __aeabi_dmul
+00006005   __aeabi_dsub
+000076d1   __aeabi_i2d
+0000779d   __aeabi_lmul
+0000707f   __aeabi_memclr
+0000707f   __aeabi_memclr4
+0000707f   __aeabi_memclr8
+00006d35   __aeabi_memcpy
+00006d35   __aeabi_memcpy4
+00006d35   __aeabi_memcpy8
+00007081   __aeabi_memset
+00007081   __aeabi_memset4
+00007081   __aeabi_memset8
+20002370   __aeabi_stderr
+20002368   __aeabi_stdin
+2000236c   __aeabi_stdout
+00007587   __aeabi_uidivmod
+00005c51   __aeabi_uldivmod
+ffffffff   __binit__
+ffffffff   __c_args__
+200023c0   __stack
+00007785   _args_main
+0000742d   _c_int00
+00005f0d   _cleanup
+20002394   _cleanup_ptr
+00006efd   _closefile
+00008920   _ctypes_
+00006bf1   _doflush
+20002398   _dtors_ptr
+20002364   _ft_end
+20002174   _ftable
+2000238c   _lock
+0000781f   _nop
+000023df   _printfi
+00006ba7   _rd_ok
+00007817   _register_lock
+00007811   _register_unlock
+200025c0   _sys_memory
+200018f4   _tmpnams
+20002390   _unlock
+00006b45   _wrt_ok
+000075cd   abort
+00005159   add_device
+00007399   atoi
+ffffffff   binit
+00004e35   calloc
+000078ad   clock_time
+00005105   close
+000074bd   copy_in
+20001ae8   data_index_html
+000075d5   exit
+00006f57   fclose
+00006c3d   fflush
+00008dc8   file_404_html
+00008e54   file_fade_png
+00008ddc   file_files_shtml
+00008df0   file_footer_html
+00008e04   file_header_html
+00008e18   file_index_html
+00008db4   file_processes_shtml
+00008e68   file_stats_shtml
+00008e2c   file_style_css
+00008e40   file_tcp_shtml
+00005f63   fopen
+00006c99   fputc
+00006565   fputs
+00004b8b   free
+00005f39   freopen
+00007169   fseek
+00000000   g_pfnVectors
+0000175d   htons
+000087cc   http_10
+000087d5   http_11
+000087b8   http_200
+000087bd   http_301
+000087c2   http_302
+00008818   http_404_html
+000087de   http_content_type
+00009154   http_content_type_binary
+00008864   http_content_type_css
+000088b7   http_content_type_gif
+00008848   http_content_type_html
+000088d3   http_content_type_jpg
+0000882b   http_content_type_plain
+0000889b   http_content_type_png
+0000887f   http_content_type_text
+00008809   http_crnl
+00008902   http_css
+000087c7   http_get
+0000890c   http_gif
+00009100   http_header_200
+000090a4   http_header_404
+00008802   http_host
+000088fd   http_htm
+000088f0   http_html
+000087b0   http_http
+0000880c   http_index_html
+00008911   http_jpg
+000087f7   http_location
+00008907   http_png
+00008822   http_referer
+000088f6   http_shtml
+00008916   http_text
+000087ed   http_texthtml
+0000891b   http_txt
+00003019   httpd_appcall
+00005203   httpd_cgi
+000062af   httpd_fs_count
+0000627b   httpd_fs_init
+00006219   httpd_fs_open
+000030b9   httpd_init
+000050b7   lseek
+00007343   ltoa
+000037c5   main
+200023b8   main_func_sp
+00004b29   malloc
+00004d5f   memalign
+0000774f   memccpy
+000077e5   memchr
+00006d35   memcpy
+00007087   memset
+00004a9d   minit
+000091f4   mymac
+0000502b   open
+00007101   printf
+000048f3   psock_datalen
+00004881   psock_generator_send
+00004a4d   psock_init
+00004909   psock_newdata
+000049cd   psock_readbuf
+00004943   psock_readto
+0000481f   psock_send
+00006d1f   putc
+00006d23   putchar
+0000666d   puts
+00004fb3   read
+000071fb   readmsg
+00004c55   realloc
+00004f2b   remove
+00004f8b   remove_device
+00004f4f   rename
+00006a79   setvbuf
+00006dd1   snprintf
+000077fb   strchr
+000077b5   strcmp
+00007881   strcpy
+00007825   strlen
+00007729   strncmp
+000076a1   strncpy
+000077cd   strrchr
+0000763d   strstr
+00006f81   tapdev_init
+00006fd3   tapdev_read
+00006fe3   tapdev_send
+000058b7   tcp_client_aborted
+00005935   tcp_client_acked
+000058e3   tcp_client_closed
+000058fb   tcp_client_connected
+20001764   tcp_client_databuf
+000057c5   tcp_client_demo_appcall
+00005893   tcp_client_reconnect
+0000594d   tcp_client_senddata
+20001ae4   tcp_client_sta
+000058cf   tcp_client_timedout
+0000722d   tcp_demo_appcall
+00005aef   tcp_server_aborted
+00005b65   tcp_server_acked
+00005b17   tcp_server_closed
+00005b2b   tcp_server_connected
+2000182c   tcp_server_databuf
+00005a21   tcp_server_demo_appcall
+00005b7d   tcp_server_senddata
+20001ae5   tcp_server_sta
+00005b03   tcp_server_timedout
+00007325   timer_expired
+00007301   timer_reset
+00007317   timer_restart
+000072eb   timer_set
+20001a6c   uip_acc32
+00000281   uip_add32
+20001a50   uip_appdata
+00003e9d   uip_arp_arpin
+00003ccd   uip_arp_init
+00003f81   uip_arp_out
+00003d05   uip_arp_timer
+20000000   uip_buf
+000003bf   uip_chksum
+20001a60   uip_conn
+000004ed   uip_connect
+20001004   uip_conns
+20001a48   uip_draddr
+2000239c   uip_ethaddr
+20001a5c   uip_flags
+20001a44   uip_hostaddr
+00000475   uip_init
+000003d9   uip_ipchksum
+20001a58   uip_len
+00000659   uip_listen
+200019f4   uip_listenports
+0000726b   uip_log
+20001a4c   uip_netmask
+00003ab1   uip_polling
+00000711   uip_process
+20001a54   uip_sappdata
+00001779   uip_send
+0000026d   uip_setipid
+20001a5a   uip_slen
+20001a74   uip_stat
+00000461   uip_tcpchksum
+200023a4   uip_timer
+0000046b   uip_udpchksum
+000005fd   uip_unlisten
+00004f2b   unlink
+00004e75   write
+000071cd   writemsg
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+address    name
+--------   ----
+00000000   __TI_static_base__
+00000000   g_pfnVectors
+00000001   __TI_args_main
+00000008   __SYSMEM_SIZE
+00000200   __STACK_SIZE
+0000026d   uip_setipid
+00000281   uip_add32
+000003bf   uip_chksum
+000003d9   uip_ipchksum
+00000461   uip_tcpchksum
+0000046b   uip_udpchksum
+00000475   uip_init
+000004ed   uip_connect
+000005fd   uip_unlisten
+00000659   uip_listen
+00000711   uip_process
+0000175d   htons
+00001779   uip_send
+000023df   _printfi
+00003019   httpd_appcall
+000030b9   httpd_init
+000030f1   SPI_ReadWriteByte
+000031e1   ENC28J60_Reset
+00003209   ENC28J60_Read_Op
+0000326f   ENC28J60_Write_Op
+000032bf   ENC28J60_Read_Buf
+0000330b   ENC28J60_Write_Buf
+0000334f   ENC28J60_Set_Bank
+0000338f   ENC28J60_Read
+000033a9   ENC28J60_Write
+000033cb   ENC28J60_PHY_Write
+00003441   ENC28J60_Init
+000035cf   ENC28J60_Get_EREVID
+000035dd   ENC28J60_Packet_Send
+00003649   ENC28J60_Packet_Receive
+0000371d   InitConsole
+0000374b   TIME_Init
+000037c5   main
+00003ab1   uip_polling
+00003bf9   Timer0IntHandler
+00003ccd   uip_arp_init
+00003d05   uip_arp_timer
+00003e9d   uip_arp_arpin
+00003f81   uip_arp_out
+00004175   UARTStdioConfig
+000041cd   UARTwrite
+0000421b   UARTgets
+000042dd   UARTgetc
+00004311   UARTvprintf
+000045dd   UARTprintf
+0000481f   psock_send
+00004881   psock_generator_send
+000048f3   psock_datalen
+00004909   psock_newdata
+00004943   psock_readto
+000049cd   psock_readbuf
+00004a4d   psock_init
+00004a9d   minit
+00004b29   malloc
+00004b8b   free
+00004c55   realloc
+00004d5f   memalign
+00004e35   calloc
+00004e75   write
+00004f2b   remove
+00004f2b   unlink
+00004f4f   rename
+00004f8b   remove_device
+00004fb3   read
+0000502b   open
+000050b7   lseek
+00005105   close
+00005159   add_device
+00005203   httpd_cgi
+000054e1   HOSTwrite
+0000552f   HOSTunlink
+00005569   HOSTtime
+000055a5   HOSTrename
+00005605   HOSTread
+00005653   HOSTopen
+000056a3   HOSTlseek
+000056ff   HOSTgetenv
+0000573d   HOSTclose
+00005777   HOSTclock
+000057c5   tcp_client_demo_appcall
+00005893   tcp_client_reconnect
+000058b7   tcp_client_aborted
+000058cf   tcp_client_timedout
+000058e3   tcp_client_closed
+000058fb   tcp_client_connected
+00005935   tcp_client_acked
+0000594d   tcp_client_senddata
+00005a21   tcp_server_demo_appcall
+00005aef   tcp_server_aborted
+00005b03   tcp_server_timedout
+00005b17   tcp_server_closed
+00005b2b   tcp_server_connected
+00005b65   tcp_server_acked
+00005b7d   tcp_server_senddata
+00005c51   __aeabi_uldivmod
+00005f0d   _cleanup
+00005f39   freopen
+00005f63   fopen
+00006005   __aeabi_dsub
+0000600f   __aeabi_dadd
+00006219   httpd_fs_open
+0000627b   httpd_fs_init
+000062af   httpd_fs_count
+000062fd   __aeabi_ddiv
+00006433   GPIOPadConfigSet
+00006565   fputs
+0000666d   puts
+00006695   SysCtlClockGet
+000067ad   __aeabi_dmul
+000068a9   SysCtlClockSet
+00006999   Buttons_Init
+000069e5   ButtonsState
+00006a79   setvbuf
+00006b45   _wrt_ok
+00006ba7   _rd_ok
+00006bf1   _doflush
+00006c3d   fflush
+00006c99   fputc
+00006d1f   putc
+00006d23   putchar
+00006d35   __aeabi_memcpy
+00006d35   __aeabi_memcpy4
+00006d35   __aeabi_memcpy8
+00006d35   memcpy
+00006dd1   snprintf
+00006e69   __TI_auto_init
+00006efd   _closefile
+00006f57   fclose
+00006f81   tapdev_init
+00006fd3   tapdev_read
+00006fe3   tapdev_send
+00007001   __aeabi_cdcmpeq
+00007001   __aeabi_cdcmple
+0000707f   __aeabi_memclr
+0000707f   __aeabi_memclr4
+0000707f   __aeabi_memclr8
+00007081   __aeabi_memset
+00007081   __aeabi_memset4
+00007081   __aeabi_memset8
+00007087   memset
+00007101   printf
+00007169   fseek
+000071cd   writemsg
+000071f7   C$$IO$$
+000071fb   readmsg
+0000722d   tcp_demo_appcall
+0000726b   uip_log
+000072eb   timer_set
+00007301   timer_reset
+00007317   timer_restart
+00007325   timer_expired
+00007343   ltoa
+00007399   atoi
+000073e5   GPIOPinConfigure
+0000742d   _c_int00
+00007475   __aeabi_d2iz
+000074bd   copy_in
+00007501   _Dtest
+00007545   SSIConfigSetExpClk
+00007587   __aeabi_uidivmod
+000075c9   C$$EXIT
+000075cd   abort
+000075d5   exit
+00007609   SysCtlPeripheralEnable
+0000763d   strstr
+00007671   LED_Init
+000076a1   strncpy
+000076d1   __aeabi_i2d
+000076ff   GPIODirModeSet
+00007729   strncmp
+0000774f   memccpy
+0000776b   GPIOPinTypeGPIOOutput
+00007785   _args_main
+0000779d   __aeabi_lmul
+000077b5   strcmp
+000077cd   strrchr
+000077e5   memchr
+000077fb   strchr
+00007811   _register_unlock
+00007817   _register_lock
+0000781f   _nop
+00007825   strlen
+00007839   GPIOPinTypeSSI
+0000784b   GPIOPinTypeUART
+0000785d   __TI_zero_init
+0000786f   _Dclass
+00007881   strcpy
+00007891   __TI_decompress_none
+0000789f   SSIDataGet
+000078ad   clock_time
+000078b9   ResetISR
+000078c5   SSIDataPut
+000078cf   SSIEnable
+000078d9   GPIOPinRead
+000078df   GPIOPinWrite
+000078e5   SysCtlDelay
+000078eb   __TI_decompress_rle24
+000087b0   http_http
+000087b8   http_200
+000087bd   http_301
+000087c2   http_302
+000087c7   http_get
+000087cc   http_10
+000087d5   http_11
+000087de   http_content_type
+000087ed   http_texthtml
+000087f7   http_location
+00008802   http_host
+00008809   http_crnl
+0000880c   http_index_html
+00008818   http_404_html
+00008822   http_referer
+0000882b   http_content_type_plain
+00008848   http_content_type_html
+00008864   http_content_type_css
+0000887f   http_content_type_text
+0000889b   http_content_type_png
+000088b7   http_content_type_gif
+000088d3   http_content_type_jpg
+000088f0   http_html
+000088f6   http_shtml
+000088fd   http_htm
+00008902   http_css
+00008907   http_png
+0000890c   http_gif
+00008911   http_jpg
+00008916   http_text
+0000891b   http_txt
+00008920   _ctypes_
+00008db4   file_processes_shtml
+00008dc8   file_404_html
+00008ddc   file_files_shtml
+00008df0   file_footer_html
+00008e04   file_header_html
+00008e18   file_index_html
+00008e2c   file_style_css
+00008e40   file_tcp_shtml
+00008e54   file_fade_png
+00008e68   file_stats_shtml
+000090a4   http_header_404
+00009100   http_header_200
+00009154   http_content_type_binary
+000091f4   mymac
+00009940   __TI_Handler_Table_Base
+0000994c   __TI_Handler_Table_Limit
+00009958   __TI_CINIT_Base
+00009968   __TI_CINIT_Limit
+20000000   uip_buf
+20001004   uip_conns
+20001644   __CIOBUF_
+20001764   tcp_client_databuf
+2000182c   tcp_server_databuf
+200018f4   _tmpnams
+200019f4   uip_listenports
+20001a44   uip_hostaddr
+20001a48   uip_draddr
+20001a4c   uip_netmask
+20001a50   uip_appdata
+20001a54   uip_sappdata
+20001a58   uip_len
+20001a5a   uip_slen
+20001a5c   uip_flags
+20001a60   uip_conn
+20001a6c   uip_acc32
+20001a74   uip_stat
+20001aa0   D0
+20001aa4   D1
+20001ae4   tcp_client_sta
+20001ae5   tcp_server_sta
+20001ae8   data_index_html
+20002174   _ftable
+20002364   _ft_end
+20002368   __aeabi_stdin
+2000236c   __aeabi_stdout
+20002370   __aeabi_stderr
+20002374   LED0_ON_PIC_ADDR
+20002378   LED1_ON_PIC_ADDR
+2000237c   LED_OFF_PIC_ADDR
+2000238c   _lock
+20002390   _unlock
+20002394   _cleanup_ptr
+20002398   _dtors_ptr
+2000239c   uip_ethaddr
+200023a4   uip_timer
+200023b8   main_func_sp
+200023c0   __stack
+200025c0   __STACK_END
+200025c0   __STACK_TOP
+200025c0   _sys_memory
+ffffffff   __binit__
+ffffffff   __c_args__
+ffffffff   binit
+UNDEFED    SHT$$INIT_ARRAY$$Base
+UNDEFED    SHT$$INIT_ARRAY$$Limit
+
+[299 symbols]
