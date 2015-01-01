@@ -1,0 +1,1 @@
+"./uartstdio.obj" "./main.obj" "./DS18B20.obj" -l"libc.a" "../driverlib.lib" "../tm4c123gh6pm.cmd" 

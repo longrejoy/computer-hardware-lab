@@ -1,0 +1,27 @@
+Added Component: Designator=D2(LED_0603_RED)
+Added Component: Designator=D3(LED_0603_RED)
+Added Component: Designator=POWER(LED_0603_RED)
+Added Component: Designator=R11(RES_0603)
+Added Component: Designator=R12(RES_0603)
+Added Component: Designator=R13(RES_0603)
+Added Pin To Net: NetName=GND Pin=D2-2
+Added Pin To Net: NetName=GND Pin=D3-2
+Added Pin To Net: NetName=GND Pin=POWER-2
+Added Pin To Net: NetName=3V3 Pin=R11-1
+Added Pin To Net: NetName=VBUS Pin=R12-1
+Added Pin To Net: NetName=V12 Pin=R13-1
+Added Pin To Net: NetName=NetD2_1 Pin=D2-1
+Added Pin To Net: NetName=NetD2_1 Pin=R12-2
+Added Net: Name=NetD2_1
+Added Pin To Net: NetName=NetD3_1 Pin=D3-1
+Added Pin To Net: NetName=NetD3_1 Pin=R13-2
+Added Net: Name=NetD3_1
+Added Pin To Net: NetName=NetPOWER_1 Pin=POWER-1
+Added Pin To Net: NetName=NetPOWER_1 Pin=R11-2
+Added Net: Name=NetPOWER_1
+Added Member To Class: ClassName=m13temp Member=Component D2 LED2
+Added Member To Class: ClassName=m13temp Member=Component D3 LED2
+Added Member To Class: ClassName=m13temp Member=Component POWER LED2
+Added Member To Class: ClassName=m13temp Member=Component R11 Res Semi
+Added Member To Class: ClassName=m13temp Member=Component R12 Res Semi
+Added Member To Class: ClassName=m13temp Member=Component R13 Res Semi
