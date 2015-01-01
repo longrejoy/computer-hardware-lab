@@ -1,0 +1,12 @@
+[ProjectGroup]
+Version=1.0
+[Project1]
+ProjectPath=module10 Motor\pcb\m10motor.PrjPCB
+[Project2]
+ProjectPath=module11 TCPIP\pcb\m11tcp.PrjPCB
+[Project3]
+ProjectPath=module12 CAN\pcb\m12can.PrjPCB
+[Project4]
+ProjectPath=module13 temperature sensor\pcb\m13temp.PrjPCB
+[Project5]
+ProjectPath=module14 Mobile\pcb\m14sim.PrjPCB
